@@ -1,0 +1,5 @@
+a = input().split(", ")
+a = list(a)
+print(a)
+a = tuple(a)
+print(a)
