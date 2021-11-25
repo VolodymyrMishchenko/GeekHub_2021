@@ -20,3 +20,4 @@ elif x < y:
 elif x == y:
     z = x = y
     print("х дорiвнює", z)
+    
