@@ -7,10 +7,25 @@
 # без цифр (лише з буквами)
 # -  якщо довжина бульше 50 - > ваша фантазiя
 
-str = "jgedfggf15hrth5fgfgbg32b3t3h6"
-if 30 < len(str) < 50:
-    print(len(str))
-elif len(str) < 30:
-    print(len(str))
-elif len(str) > 50:
-    print("Бімба")
+juststring = input()
+onlyleters = []
+numbersum = 0
+numbers = 0
+letters = 0
+
+for symbol in juststring:
+    if symbol.isdigit():
+        numbersum += int(symbol)
+        numbers += 1
+    elif symbol.isalpha():
+        onlyleters += symbol
+        letters += 1
+if len (juststring) > 30 and len (juststring) < 50:
+    print('Довжина рядка',len(juststring))
+    print('Кількість цифр',numbers)
+    print('Кількість букв',letters)
+elif len(juststring) < 30:
+    print('Сума чисел:',numbersum)
+    print('Рядок без чисел:',''.join(onlyleters))
+elif len(juststring) > 50:
+    print('Рядок:',juststring[::-1])
