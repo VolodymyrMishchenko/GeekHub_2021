@@ -6,19 +6,15 @@
 # необов'язковим і має значення по замовчуванню < 10 > (10%). 
 # Функція повинна принтануть і вернуть суму, яка буде на рахунку.
 
-n = int(input())
-m = int(input())
-y = int(input())
+def bank(cash, years, percents=10):
+        for year in range(years):
+                income = (cash / 100 *percents)
+                cash += income
+        return cash
+               
+                 
 
-def bank(n, m, y):
-        nal = n
-        year = y
-        def money():
-            if year > 0:
-                nal = n * 1.1 + m
-                year = year - 1
-                return money()
-            else:
-                return nal
-
-print(nal)
+cash = int(input('Cash: '))
+years = int(input('Years: '))
+percents = int(input('Percent: '))
+print(bank(cash, years))

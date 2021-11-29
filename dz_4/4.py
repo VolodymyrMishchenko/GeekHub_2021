@@ -2,16 +2,29 @@
 # початок і кінець діапазона, і вертатиме список простих чисел 
 # всередині цього діапазона.
 
-def primesList(n):
-   
-    def is_prime(a):
-        if a < 2:
-            return False
-        return all(a % i for i in xrange(2, a))
+from cmath import sqrt
 
-    prime_list=[]
-    for num in range(2, n +1):
-        if is_prime(num):
-            prime_list.append(num)
-    return prime_list
-print(prime_list)
+def is_prime(number):
+    
+    if number % 2 == 0 and number != 2:
+        return False
+    
+    if number == 0 or number == 1:
+        return False
+   
+    for n in range(3, int(sqrt(number).real) + 1, 2):
+        if number % n == 0:
+            return False
+    return True
+
+def prime_list(start, end):
+    prime_numbers_list = []
+    for number in range(start, end):
+        if is_prime(number):
+            prime_numbers_list.append(number)
+    return prime_numbers_list
+
+begin = int(input('From: '))
+finish = int(input('To: '))
+
+print(prime_list(begin, finish))
