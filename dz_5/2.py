@@ -6,3 +6,17 @@
 # - щось своє :)
 # Якщо якийсь із параментів не відповідає вимогам - породити 
 # виключення із відповідним текстом.
+
+def validation(user_name, user_password):
+    if len(user_name) < 3:
+        raise Exception('Меньше 3')
+    if len(user_name) > 50:
+        raise Exception('Більше 50')
+
+    if len(user_password) < 8:
+        raise Exception('Меньше 8')
+
+    if len(user_password) > 20:
+        raise Exception('Більше 20')
+    
+validation('bfghd', '16216')
