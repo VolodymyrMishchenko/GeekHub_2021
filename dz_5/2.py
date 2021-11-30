@@ -9,14 +9,21 @@
 
 def validation(user_name, user_password):
     if len(user_name) < 3:
-        raise Exception('Меньше 3')
+        raise Exception('Меньше 3 символів')
     if len(user_name) > 50:
-        raise Exception('Більше 50')
+        raise Exception('Більше 50 символів')
 
     if len(user_password) < 8:
-        raise Exception('Меньше 8')
+        raise Exception('Меньше 8 символів')
+
+    else:
+
+        for digit in user_password:
+            if user_password.isdigit() <= 1:
+               raise Exception('Більше однієї цифри')
+        
 
     if len(user_password) > 20:
-        raise Exception('Більше 20')
+        raise Exception('Більше 20 символів')
     
-validation('bfghd', '16216')
+validation('bfghd', 'uikuik12')
