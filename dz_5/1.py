@@ -17,7 +17,7 @@ def check_user(username, password, silent=False):
         {'bob': '2593'}, 
         {'mell': '4827'}, 
         {'rece': '1597'}, 
-        {'kap': '3596'}, 
+        {'kap': '3596'},
         {'dax': '4268'}]
     for user in users:
         for name, pas in user.items():
@@ -26,8 +26,9 @@ def check_user(username, password, silent=False):
             elif silent:
                 return False
             else:
-                raise LoginException('Exceptions')
-print(check_user())
+                raise LoginException('Incorrect password and silent=False')
+            
+print(check_user(username = 'bob', password = '2583', silent=False))
 
 
     
