@@ -25,10 +25,10 @@ def check_user(username, password, silent=False):
                 return True
             elif silent:
                 return False
-            else:
-                raise LoginException('Incorrect password and silent=False')
+                
+    raise LoginException('Incorrect password and silent=False')
             
-print(check_user(username = 'bob', password = '2583', silent=False))
+print(check_user(username = 'dax', password = '4468', silent=False))
 
 
     
