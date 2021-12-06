@@ -20,8 +20,7 @@ def custom_range(start, stop=0, step=1):
                 start += step
 
 
-     
-     
+
 print(list(custom_range(20)))
 print(list(custom_range(0, 20)))
 print(list(custom_range(0, 20, 2)))
