@@ -6,6 +6,7 @@
 # https://docs.python.org/3/library/stdtypes.html#range
 
 def custom_range(start, stop=0, step=1):
+<<<<<<< HEAD
     if step > 0:
         if start and not stop:
             stop = start
@@ -31,6 +32,3 @@ print(list(custom_range(-20)))
 print(list(custom_range(0, 20, -2)))
 
 print(list(range(0, 20, 2)))
-
-for i in custom_range(0, 20, 2):
-    print(i)
