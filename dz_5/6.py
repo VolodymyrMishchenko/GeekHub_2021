@@ -14,9 +14,14 @@ def custom_range(start, stop=0, step=1):
         start = start + step
         if start > stop or start == stop:
             break
+    while True:
+        yield start
+        start = start + step
+        if step == -2:
+            break
         
-print(list(custom_range(0, 20, 2)))
-print(list(range(0, 20, 2)))
+print(list(custom_range(0, 20, -2)))
+print(list(range(0, 20, -2)))
 
-for i in custom_range(0, 20, 2):
-    print(i)
+#for i in custom_range(0, 20, 2):
+    #print(i)
