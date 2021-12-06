@@ -6,7 +6,7 @@
 # https://docs.python.org/3/library/stdtypes.html#range
 
 def custom_range(start, stop=0, step=1):
-    if stop == 0:
+    if not stop:
         stop = start
         start = 0
     while True:
