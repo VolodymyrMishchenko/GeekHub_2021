@@ -68,7 +68,6 @@ def withdraw_cash(user_name):
       transactions(user_name, -cash)
    return
    
-
 def start():
    user_name = get_user(input("Введіть ім'я: "), input("Введіть пароль: "))
    if not user_name:
