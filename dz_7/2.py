@@ -10,3 +10,21 @@
 #   █ █ █ ░ ░ ░ ░ ░ ░ █ █ █ ░ ░ ░ ░ █ █ █    - неправильно 
 #                     ⏫ центр
 
+def func(user_test, simbol):
+	if simbol <= 0:
+		print('Кількість символів повинна бути більше ніж 0')
+	else:
+		with open(user_test, 'r') as f:
+			text = f.read()
+
+		if len(text) >= simbol:
+			centr_text = ((len(text) + 1) // 2)
+			centr = text[int(centr_text - simbol / 2):int(centr_text + simbol / 2)]
+			print(f'Початок: {text[:simbol]}')
+			print(f'Кінець: {text[-simbol:]}')
+			print(f'Середина: {centr}')
+		else:
+			print(f'Кількість символів повинна бути не більше ніж: {len(text)}')
+	
+simbol = int(input('Введіть число: '))
+func('test_1.txt', simbol)
