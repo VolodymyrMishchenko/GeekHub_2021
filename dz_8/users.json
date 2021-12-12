@@ -1,0 +1,14 @@
+[
+	{
+		"fisrst_name": "Bill", 
+		"password": "0000", 
+		"balance": 1000, 
+		"role" :"user"
+	}, 
+	{
+		"fisrst_name": "Mall", 
+		"password": "1111", 
+		"balance": 1000, 
+		"role" :"inkosator"
+	}
+]
