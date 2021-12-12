@@ -21,24 +21,25 @@ from datetime import datetime
 
 
 def transactions(user_name, money):
-   data_log = {str(datetime.now()): money}
-   with open(f'{user_name}_transactions.json', 'a') as f:
-      json.dump(data_log, f)
-   return
+    data_log = {str(datetime.now()): money}
+    with open(f'{user_name}_transactions.json', 'a') as f:
+       json.dump(data_log, f)
+    return
 
 def get_user(user_name, user_password):
-   with open("users.json", "r") as f:
-      text = json.load(f)
-      if (user_name, user_password) in text.items():
-         return user_name
-      else:
-         print('Не вірний пароль')
-         return False
+	with open("users.json", "r") as f:
+		text = json.load(f)
+    	for user_dict in text:
+    		if user_name == first_name:
+       			return user_name
+        	else:
+           		print('Не вірний пароль')
+           		return False
 
 def get_balance(user_name):
-   with open(f'{user_name}.txt') as f:
-      balance = f.read()
-      return balance
+	with open(f'{user_name}.txt') as f:
+		balance = f.read()
+		return balance
       
 def add_cash(user_name):
    cash = abs(int(input("Скільки покласти: ")))
